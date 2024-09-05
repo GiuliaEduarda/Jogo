@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata moscas - jogo</title>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+     <!-- Bootstrap CSS dentro do head-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+
+<script src="https://kit.fontawesome.com/4533a4cadf.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body onresize="ajustaTamanhoTela()">
+    
+   <div class="painel">
+    <div class="vidas">
+        <img id="v1" src="imagens/coracao_cheio.png" alt="">
+        <img id="v2" src="imagens/coracao_cheio.png" alt="">
+        <img  id="v3"src="imagens/coracao_cheio.png" alt="">
+    </div>
+    <div class="cronometro">tempo restante: <span id="cronometro"></span>
+
+    </div>
+   </div>
+   
+    <script>
+
+        document.getElementById('cronometro').innerHTML = tempo
+        posicaoRandomica()
+        var criaMoscas = setInterval( function() {posicaoRandomica()}, criaMoscasTempo)
+        
+    </script>
+</body>
+</html>
